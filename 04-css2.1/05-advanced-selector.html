@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Advanced Selectors</title>
+	<style>
+		ul>li{
+			background-color: aqua;
+			margin: 5px;
+			padding:5px;
+		}
+		ul li + li + li {
+			background-color: green;
+		}
+		li[class]{
+			background-color: orchid;
+		}
+	</style>
+</head>
+<body>
+	<h1>Advanced Selectors</h1>
+	<hr>
+	<h2>Children Selectors: ul > li </h2>
+	<h2>Adjacent Selectors: ul li + li + li </h2>
+	<h2>Attribute Selectors: li[class] </h2>
+
+	<ol>
+		<li>
+			Bleach
+			<ul>
+				<li class="highlight">Aizen</li>
+				<li>Kenpachi</li>
+				<li>Yuroichi</li>
+				<li>Ichigo</li>
+
+			</ul>
+		</li>
+		<li>
+			The witcher
+			<ul>
+				<li>Yennefer</li>
+				<li class="highlight">Geralt</li>
+				<li>Tissaia</li>
+				<li>Jaskier</li>	
+			</ul>
+		</li>
+	</ol>
+
+</body>
+</html>
