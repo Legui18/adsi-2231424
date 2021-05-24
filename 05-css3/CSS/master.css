@@ -21,3 +21,10 @@ main h1{
 main h3{
 	text-align: center;
 }
+
+h1 span a:link,
+h1 span a:visited {
+	color: white;
+	text-decoration: none;
+	float: left;
+}
