@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Challenge Responsive</title>
+	<style>
+		* { font-family:sans-serif;
+			transition: all 0.5s ease-out;}
+		main{
+			margin: 10px auto;
+			padding: ;
+			width: 1000px;
+		}
+		main figure.logo{
+			background: url(imgs/logo.png) no-repeat center;
+			margin: 0px auto;
+			height: 371px;
+			width: 300px;
+		}
+		section.image{
+			display: inline-block;
+			height: 200px;
+			width: 1000px;
+		}
+		section.image div{
+			display: inline-block;	
+			position: relative;		
+		}
+		section.image div.i1{		    
+			background: url(imgs/i1.png) no-repeat center;
+			height: 200px;
+			margin-right: 6px;
+			width: 240px;
+		}
+		section.image div.i2{
+		   
+			background: url(imgs/i2.png) no-repeat center;
+			height: 200px;
+			margin-right: 7px;
+			width: 240px;
+		}
+		section.image div.i3{
+		    
+			background: url(imgs/i3.png) no-repeat center;
+			height: 200px;
+			margin-right: 7px;
+			width: 240px;
+		}
+		section.image div.i4{
+		   
+			background: url(imgs/i4.png) no-repeat center;
+			height: 200px;
+			width: 240px;
+		}
+		/*----*/
+		section div.container{
+			background-color: rgb(77, 77, 77); ;
+			height: 31px;
+			width: 240px;
+			margin-top: 160px;
+			position: absolute;
+		} 
+		/*-------------*/
+		section.texta{
+			margin-top: 20px;
+			display: inline-block;
+			height: 200px;
+			width: 999px;
+			border: 1px #ac3 solid;
+		}
+		section.texta div.pain{
+			display: inline-block;
+			background: url(imgs/i4.png) no-repeat center;
+			border: 1px solid;
+			height: 200px;
+			width: 240px;
+		}
+		div.primero{
+			display: inline-block;
+			height: 200px;
+			width: 700px;
+			border:1px #777 dashed;
+			text-align: justify;
+		}
+		/*--2----*/
+		 section.text {
+            height: 250px;
+            width: 999px;
+            border: 2px dotted #E2E2E2;
+            overflow: hidden;
+            margin: 50px auto;
+        }
+        section.text div.pain {
+            background: url(imgs/pain.png) no-repeat center;
+            background-size: cover;
+            height: 250px;
+            width: 255px;
+            border:1px solid;
+        } 
+        section.text div.konnan {
+            background: url(imgs/konan.png) no-repeat center;
+            background-size: cover;
+            height: 250px;
+            width: 255px;
+        }
+        section.text div.pain,
+        section.text div.konnan,
+        section.text div.move {
+            display: inline-block;
+        }
+        section.text div.move h3 {
+            font-size: 150%;
+            margin: 25px 0px 25px 0px; 
+            text-align: center;    
+            margin-left: 50px;     
+        }
+        section.text div.move p {
+            font-size: 15px;
+            line-height: 23px;
+            text-align: justify;
+            width: 555px;
+            margin-top: 0px;
+            margin-left: 50px;
+        }
+        section.text div.move h3,
+        section.text div.move {
+            display: inline-block;
+            vertical-align: top; 
+        }
+        section.text.a {
+            margin-top: 0px;
+        }
+	</style>
+</head>
+<body>
+	<main>
+		<figure class="logo"></figure>
+		<section class="image">
+			<div class="i1">
+				<div class="container"><a href="">Orochimaru</a></div>
+			</div>
+			<div class="i2">
+				<div class="container"><a href="">Itachi</a></div>
+			</div>
+			<div class="i3">
+				<div class="container"><a href="">Sasori</a></div>
+			</div>
+			<div class="i4">
+				<div class="container"><a href="">Deidara</a></div>
+			</div>
+		</section>	
+		<section class="text">
+    		<div class="pain"></div>
+                <div class="move">
+                    <h3>Pain</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, magnam blanditiis ratione veritatis, natus illo ipsa voluptas voluptate quos saepe dicta placeat aliquid aperiam autem sit fugit minima maxime atque et laborum quidem delectus sint, animi. Iusto optio aliquid quisquam, quas mollitia quae voluptatem error eum! Sunt quibusdam facere eaque totam quaerat tenetur nostrum dolor. </p>
+                </div>
+    	</section>
+    	<br>
+    	<section class="text a">
+    		<div class="konnan"></div>
+                <div class="move">
+                    <h3>Konnan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, magnam blanditiis ratione veritatis, natus illo ipsa voluptas voluptate quos saepe dicta placeat aliquid aperiam autem sit fugit minima maxime atque et laborum quidem delectus sint, animi. Iusto optio aliquid quisquam, quas mollitia quae voluptatem error eum! Sunt quibusdam facere eaque totam quaerat tenetur nostrum dolor.</p>
+                </div>
+    	</section>
+			</div>
+		</section>
+	</main>	
+</body>
+</html>
