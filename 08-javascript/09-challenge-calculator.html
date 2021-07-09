@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Calculator JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        
+        div.calculadora{
+            background: url(imgs/calculator/fondo.png)no-repeat center;
+            height: 667px;
+            margin: 0px auto 40px auto;
+            position: relative;
+            width: 375px;
+        }
+        div.calculadora nav.modo{
+            left: 157px;
+            position: absolute;
+            top: 19px;
+            width: 120px;
+        }
+        div.calculadora nav.modo a{
+            display: inline-block;
+            height: 28px;
+            transition: transform 0.2s ease-in;
+            width: 31px;           
+        }
+        div.calculadora nav.modo a#modoN:hover{
+            transform: scale(1.1) translate(5px);
+
+        }
+        div.calculadora nav.modo a#modoN{
+            background: url(imgs/calculator/noshe.png) no-repeat center;
+        }
+        div.calculadora div.pantalla{
+        font-family: 'Roboto', sans-serif;
+        text-align: right;
+        position: absolute;
+        top: 141px;
+        right: 20px;
+        width: 270px;
+        }
+        div.calculadora div.pantalla p#operation{
+            color: #fff;
+            margin: 0px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        div.calculadora div.pantalla h4#answer{
+            color: #fff;
+            margin: 0px;
+            font-size: 58px;
+            font-weight: 400;
+        }
+
+        /*        botones      */
+        
+        div.calculadora nav.botones{
+            position: absolute;
+            top: 279px;
+            left: 14px;
+            width: 340px;
+            height: 366px;
+
+        }
+        div.calculadora nav.botones ul::selection{
+            background-color: transparent;
+        }
+        div.calculadora nav.botones ul{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        div.calculadora nav.botones ul li{
+            background-color: green;
+            display: inline-block;
+            width: 80px;
+            margin: -2px 0px -2px 1.5px;
+            height: 78px;
+
+        }   
+
+        div.calculadora nav.botones ul li:hover{
+            cursor: pointer;
+            transform: scale(1.1) ;
+        }
+        div.calculadora nav.botones ul li#c{
+            background: url(imgs/calculator/c.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#division{
+            background: url(imgs/calculator/division.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#_{
+            background: url(imgs/calculator/_.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#borrar{
+            background: url(imgs/calculator/borrar.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot7{
+            background: url(imgs/calculator/7.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot8{
+            background: url(imgs/calculator/8.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot9{
+            background: url(imgs/calculator/9.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot-{
+            background: url(imgs/calculator/-.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot4{
+            background: url(imgs/calculator/4.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot5{
+            background: url(imgs/calculator/5.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot6{
+            background: url(imgs/calculator/6.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#botmas{
+            background: url(imgs/calculator/+.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot1{
+            background: url(imgs/calculator/1.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot2{
+            background: url(imgs/calculator/2.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot3{
+            background: url(imgs/calculator/3.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#botigual{
+            background: url(imgs/calculator/=.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#botpotencia{
+            background: url(imgs/calculator/%.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#bot0{
+            background: url(imgs/calculator/0.png)no-repeat center;
+        }
+        div.calculadora nav.botones ul li#botpunto{
+            background: url(imgs/calculator/..png)no-repeat center;
+        }
+
+        /*    noche   */
+        div.calculadora.modoN a#modoD{
+            background: url(imgs/calculator/dia.png) no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span><a href="index.html">&larr;</a></span> Challenge Calculator JS 09-challenge-calculator</h1>
+        </header>
+        <section>
+            <div class="calculadora">
+                <nav class="modo">
+                    <a href="javascript:;" id="modoN"></a>
+                    <a href="javascript:;" id="modoD"></a>
+                </nav>
+                <div class="pantalla">
+                    <p id="operation"></p>
+                    <h4 id="answer"></h4>
+                </div>
+                <nav class="botones">
+                    <ul>
+                        <li id="c"></li>
+                        <li id="division"></li>
+                        <li id="_"></li>
+                        <li id="borrar"></li>
+                        <li id="bot7"></li>
+                        <li id="bot8"></li>
+                        <li id="bot9"></li>
+                        <li id="bot-"></li>
+                        <li id="bot4"></li>
+                        <li id="bot5"></li>
+                        <li id="bot6"></li>
+                        <li id="botmas"></li>
+                        <li id="bot1"></li>
+                        <li id="bot2"></li>
+                        <li id="bot3"></li>
+                        <li id="botigual"></li>
+                        <li id="botpotencia"></li>
+                        <li id="bot0"></li>
+                        <li id="botpunto"></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        // 27 character
+        var totalCaracter = 0;
+        var operation = document.getElementById('operation');
+        var anwser    = document.getElementById('anwser');
+        var operation = document.getElementById('operation');
+
+        const skin  = document.querySelector('div.calculadora');
+        const modoD = document.getElementById('modoD');
+        const modoN = document.getElementById('modoN');
+        const c = document.getElementById('c');
+        const bot1 = document.getElementById('bot1');
+        const bot2 = document.getElementById('bot2');
+        const bot3 = document.getElementById('bot3');
+        const bot4 = document.getElementById('bot4');
+        const bot5 = document.getElementById('bot5');
+        const bot6 = document.getElementById('bot6');
+        const bot7 = document.getElementById('bot7');
+        const bot8 = document.getElementById('bot8');
+        const bot9 = document.getElementById('bot9');
+        const bot0 = document.getElementById('bot0');
+        const botpunto = document.getElementById('botpunto');
+        const botigual = document.getElementById('botigual');
+        const botpotencia = document.getElementById('botpotencia');
+        const botborrar = document.getElementById('botborrar');
+        const botmas = document.getElementById('botmas');
+        const bot_= document.getElementById('bot_');
+
+        function validateLength() {
+            if(totalCaracter <= 26) {
+                totalCaracter++;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+
+
+        function addCharacter(c) {
+            if(validateLength()) {
+                operation.innerText += c;
+            }
+        }
+        function clearCharacters() {
+            operation.innerText = '';
+            anwser.innerText = '';
+            totalCaracter = 0;
+        }
+
+
+        modoD.onclick = function() {
+            skin.classList.add('modoD');
+        }
+        modoN.onclick = function() {
+            skin.classList.add('modoD');
+        }
+
+       
+
+
+        c.onclick = function() {
+            clearCharacters();
+        }
+        bot1.onclick = function() {
+            addCharacter(1);
+        }
+        bot2.onclick = function() {
+            addCharacter(2);
+        }
+        bot3.onclick = function() {
+            addCharacter(3);
+        }
+        bot4.onclick = function() {
+            addCharacter(4);
+        }
+        bot5.onclick = function() {
+            addCharacter(5);
+        }
+        bot6.onclick = function() {
+            addCharacter(6);
+        }
+        bot7.onclick = function() {
+            addCharacter(7);
+        }
+        bot8.onclick = function() {
+            addCharacter(8);
+        }
+        bot9.onclick = function() {
+            addCharacter(9);
+        }
+        bot0.onclick = function() {
+            addCharacter(0);
+        }
+        botpunto.onclick = function() {
+            addCharacter(".");
+        }
+        botigual.onclick = function() {
+            addCharacter("=");
+        }
+        botpotencia.onclick = function() {
+            addCharacter("%");
+        }
+        botmas.onclick = function() {
+            addCharacter("+");
+        }
+
+    </script>
+           
+    
+</body>
+</html>
