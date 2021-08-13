@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Ar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 500px;
+        }
+        table tr th{
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        table tr th input{
+            border: none;   
+            border-radius: 20px;
+            outline: none;
+            padding: 8px;
+        }
+        table tr:nth-child(odd){
+            background-color: #fff;
+        }
+        table tr:nth-child(even){
+            background-color: #f0dc68;
+        }   
+        table tr td{
+            padding: 10px;
+        } 
+        
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><span><a href="index.html"></a></span>Operation Arithmetic</h1>
+        </header>
+        <section>
+            <table>
+                <tr>
+                    <th colspan="5">
+                        <input type="number" id="vy" placeholder="valor de Y">
+                    </th>
+                </tr>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Result X</th>
+                    <th>Result Y</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Add</td>
+                    <td>x = y + 2</td>
+                    <td id="vx1"></td>
+                    <td id="vy"></td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Substraction</td>
+                    <td>x = y - 2</td>
+                    <td id="vx2"></td>
+                    <td id="vy2"></td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Product</td>
+                    <td>x = y * 2</td>
+                    <td id="vx3"></td>
+                    <td id="vy3"></td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                    <td>x = y / 2</td>
+                    <td id="vx4"></td>
+                    <td id="vy4"></td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulus</td>
+                    <td>x = y % 2</td>
+                    <td id="vx5"></td>
+                    <td id="vy5"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">++</td>
+                    <td rowspan="2">Increment</td>
+                    <td>x = ++y</td>
+                    <td id="vx6"></td>
+                    <td id="vy6"></td>
+                </tr>
+                <tr>
+                    <td>x = y++</td>
+                    <td id="vx7"></td>
+                    <td id="vy7"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">--</td>
+                    <td rowspan="2">Decrement</td>
+                    <td>x = --y</td>
+                    <td id="vx8"></td>
+                    <td id="vy8"></td>
+                </tr>
+                <tr>
+                    <td>x = y--</td>
+                    <td id="vx9"></td>
+                    <td id="vy9"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        //variable
+        var vy = document.getElementById('vy');
+        //x
+        var vx = document.getElementById('vx1');
+        var vx = document.getElementById('vx2');
+        var vx = document.getElementById('vx3');
+        var vx = document.getElementById('vx4');
+        var vx = document.getElementById('vx5');
+        var vx = document.getElementById('vx6');
+        var vx = document.getElementById('vx7');
+        var vx = document.getElementById('vx8');
+        var vx = document.getElementById('vx9');
+        //y
+        var vy = document.getElementById('vy1');
+        var vy = document.getElementById('vy2');
+        var vy = document.getElementById('vy2');
+        var vy = document.getElementById('vy3');
+        var vy = document.getElementById('vy4');
+        var vy = document.getElementById('vy5');
+        var vy = document.getElementById('vy6');
+        var vy = document.getElementById('vy7');
+        var vy = document.getElementById('vy8');
+        var vy = document.getElementById('vy9');
+        //event
+        vy.onkeyup=function(){
+            let valy=this.value;
+
+            if(valy.length > 0 && valy.length <=3) {
+                vx1.innerText=parseInt(valy) + 2;
+                vy1.innerText=valy;
+                //------
+                vx2.innerText=parseInt(valy) - 2;
+                vy2.innerText=valy;
+                //------
+                vx3.innerText=parseInt(valy) * 2;
+                vy3.innerText=valy;
+                //------
+                vx4.innerText=parseInt(valy) / 2;
+                vy4.innerText=valy;
+                //------
+                vx5.innerText=parseInt(valy) % 2;
+                vy5.innerText=valy;
+                //------
+                vx6.innerText=++valy;
+                vx6.innerText=valy;
+                //------
+                vx7.innerText=valy++;
+                vx7.innerText=valy;
+                //------
+                vx8.innerText=--valy;
+                vx8.innerText=valy;
+                //------
+                vx9.innerText=valy--;
+                vx9.innerText=valy;
+                //------
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

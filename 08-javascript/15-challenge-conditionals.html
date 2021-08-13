@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="menu.css">
+	<title>challenge Conditionals</title>
+	<style>
+		div.fondo {
+			background: url(imgs1/lienso1.png) no-repeat center;
+			height: 896px;
+			width: 414px;
+			border-radius: 25px , 25px;
+			margin: 0 auto 40px auto;
+			position: relative;
+			top: 14px;
+			left: 14px;
+		}
+		div.cuadro{
+			background: url(frames/choose\ your\ gender.png) no-repeat center;
+  			height: 31px;
+			width: 208px;
+			top: 14px;
+			left: 64px;
+			text-align: center;
+			position: relative;
+		}
+		 div.fondo input[type=checkbox] {
+			cursor: pointer;
+			-webkit-appearance: none;
+			position: absolute;
+			height: 207px;
+			top: 222px;
+			width: 160px;
+			transition: all 0.2s ease-in;
+		}
+		div.fondo input[type=checkbox]:hover {
+                        transform: scale(1.1);}
+		input#hombre {
+			background: url(imgs1/boy.png) no-repeat center;
+		    width: 122px;
+		    height: 122px;
+		    top: 299px;
+		    left: 51px;
+   
+		}
+		input#hombre:checked {
+            background: transparent url(imgs1/boyverify.png) no-repeat center; 
+			width: 140px;
+			height: 140px;
+			top: 288px;
+			left: 33px;
+			position: absolute;
+		}
+		input#mujer {
+			background: url(imgs1/girl.png) no-repeat center;
+		    width: 122px;
+		    height: 122px;
+		    top: 298px;
+		    left: 239px;
+		}
+		input#mujer:checked {
+            background: transparent url(imgs1/girlverify.png) no-repeat center; 
+			width: 140px;
+		    height: 140px;
+		    top: 283px;
+    		left: 227px;
+			position: absolute;		
+		}
+		div.fondo div.boy{
+		  width: 139px;
+		  height: 20px;
+		  top: 250px;
+		  left: 15px;
+		  position: absolute;
+		}
+		div.fondo div.girl{
+		  width: 139px;
+		  height: 20px;
+		  top: 250px;
+		  left: 195px ;
+		  position: absolute;
+		}
+		 div.fondo div.nombre {
+			background: url(frames/fullname_.png) no-repeat center;
+			width: 94px;
+			height: 12px;
+			top:513px;
+			left: 37px;
+			position: relative;
+		}
+		 div.fondo  input#persona{
+		 	background: none;
+		    border: none;
+		    width: 275px;
+		    height: 42px;
+		    top: 496px;
+		    left: 87px;
+		    position: relative;
+		}
+		div.fondo div.calendario {
+			background: url(frames/birthday_.png) no-repeat center;
+			width: 94px;
+			height: 15px;
+			top:548px;
+			left: 37px;
+			position: relative;
+		}
+		div.fondo input#calendario{	
+		    background: url(frames/cumpleaños.png)no-repeat center;
+		    width: 267px;
+		    height: 64px;
+		    top: 562px;
+		    left: 97px;
+		    position: relative;
+		    border: none;
+		}
+		div.fondo input#verify {
+			background: url(imgs1/verifyimg.png) no-repeat center;
+			width: 345px;
+			height: 71px;
+			top: 611px;
+			left: 30px;
+			position: relative;
+		}
+		div.fondo input#verify:checked {
+                        background: transparent url(imgs1/verifyimg.png) no-repeat center; 
+			width: 345px;
+			height: 71px;
+			top: 600px;
+			left: 30px;
+			position: relative;		
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+            <h1><span><a href="index.html">&larr;</a></span></h1>
+        </header>
+		<section>
+			<div class="fondo">
+                            <h2></h2>
+				    <div class="choose"></div>
+				    <div class="cuadro"></div>
+				    <input type ="checkbox" id="hombre"></input>
+				    <input type ="checkbox" id="mujer"></input>
+				    <div class="boy"></div>
+				    <div class="girl"></div>
+			    <div class="nombre"></div>
+			    <input type="text" id="persona"></input>    
+			    <div class="calendario"></div>
+			    <input type="date" id="calendario"></imput>    
+			    <div class="verify"></div>
+			    <input type = "checkbox" id="verify"></input>
+			</div>
+		</section>
+	</main>
+</body>
+<script>
+	const circles = document.querySelectorAll('input[type=checkbox]');
+        // Events
+        for (let i = 0; i < circles.length; i++) {
+            circles[i].onclick = function() {
+                if(this.checked) {
+                    circles[0].checked = false;
+                    circles[1].checked = false;
+                    this.checked = true;
+                }
+        }
+ }
+</script>
+</html>
