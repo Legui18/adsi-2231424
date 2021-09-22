@@ -18,7 +18,7 @@
             position: relative;
             width: 1150px;
         }
-        div.balota figure.ball {
+        div.balota figure.balotas {
             background: transparent url(imgs/baloto/estrella.png) no-repeat center;
             margin: 0px;
             height: 155px;
@@ -33,37 +33,37 @@
             text-align: center;
             width: 144px;
         }
-        div.balota figure.ball h5 {
+        div.balota figure.balotas h5 {
             color: #F9F6F6;
             margin: 18px 35px 0px auto;
             
         }
         
         
-        div.balota figure.ball.ball1 {
+        div.balota figure.balotas.balota1 {
             left: 38px;
             top: 423px;
         }
         
-        div.balota figure.ball.ball2 {
+        div.balota figure.balotas.balota2 {
             left: 192px;
             top: 250px;
            
         }
-        div.balota figure.ball.ball3 {
+        div.balota figure.balotas.balota3 {
             left: 316px;
             top: 423px;
         }
-        div.balota figure.ball.ball4 {
+        div.balota figure.balotas.balota4 {
             left: 468px;
             top: 250px;
             
         }
-        div.balota figure.ball.ball5 {
+        div.balota figure.balotas.balota5 {
             left: 621px;
             top: 423px;
         }
-        div.balota figure.ball.ball6 {
+        div.balota figure.balotas.balota6 {
             color: #fff;
             background: transparent url(imgs/baloto/estrellaAzul.png) no-repeat center;
             left: 656px;
@@ -72,7 +72,7 @@
             height: 164px;
 
         }
-        div.balota figure.ball.ball6 h5 {
+        div.balota figure.balotas.balota6 h5 {
             color: #F0F908;
             
         }
@@ -100,12 +100,12 @@
         </header>
         <section>
             <div class="balota">
-                <figure class="ball ball1 animate__animated" id="primera1"><h5 id="ball1">4</h5></figure>
-                <figure class="ball ball2 animate__animated" id="primera2"><h5 id="ball2">34</h5></figure>
-                <figure class="ball ball3 animate__animated" id="primera3"><h5 id="ball3">27</h5></figure>
-                <figure class="ball ball4 animate__animated" id="primera4"><h5 id="ball4">14</h5></figure>
-                <figure class="ball ball5 animate__animated" id="primera5"><h5 id="ball5">39</h5></figure>
-                <figure class="ball ball6 animate__animated" id="primera6"><h5 id="ball6">16</h5></figure> 
+                <figure class="balotas balota1 animate__animated" id="primera1"><h5 id="balota1">4</h5></figure>
+                <figure class="balotas balota2 animate__animated" id="primera2"><h5 id="balota2">34</h5></figure>
+                <figure class="balotas balota3 animate__animated" id="primera3"><h5 id="balota3">27</h5></figure>
+                <figure class="balotas balota4 animate__animated" id="primera4"><h5 id="balota4">14</h5></figure>
+                <figure class="balotas balota5 animate__animated" id="primera5"><h5 id="balota5">39</h5></figure>
+                <figure class="balotas balota6 animate__animated" id="primera6"><h5 id="balota6">16</h5></figure> 
                 <button class="botonPlay"></button>
             </div>
         </section>
@@ -114,15 +114,15 @@
     <script>
         
         const btnPlay = document.querySelector('button.botonPlay');
-        const balls   = document.querySelectorAll('figure.ball');
+        const balls   = document.querySelectorAll('figure.balotas');
 
         btnPlay.onclick = function() {
-            let ball1= Math.random()*43;
-            let ball2= Math.random()*43;
-            let ball3= Math.random()*43;
-            let ball4= Math.random()*43;
-            let ball5= Math.random()*43;
-            let ball6= Math.random()*16;
+            let balota1= Math.random()*43;
+            let balota2= Math.random()*43;
+            let balota3= Math.random()*43;
+            let balota4= Math.random()*43;
+            let balota5= Math.random()*43;
+            let balota6= Math.random()*16;
 
             let animacion=document.getElementById("primera1");
             let animacion2=document.getElementById("primera2");
@@ -131,18 +131,18 @@
             let animacion5=document.getElementById("primera5");
             let animacion6=document.getElementById("primera6");
 
-            let mostrar1 = document.getElementById("ball1");
-            mostrar1.innerHTML=(Math.round(ball1));
-            let mostrar2 = document.getElementById("ball2");
-            mostrar2.innerHTML=(Math.round(ball2));
-            let mostrar3 = document.getElementById("ball3");
-            mostrar3.innerHTML=(Math.round(ball3));
-            let mostrar4 = document.getElementById("ball4");
-            mostrar4.innerHTML=(Math.round(ball4));
-            let mostrar5 = document.getElementById("ball5");
-            mostrar5.innerHTML=(Math.round(ball5));
-            let mostrar6 = document.getElementById("ball6");
-            mostrar6.innerHTML=(Math.round(ball6));
+            let mostrar1 = document.getElementById("balota1");
+            mostrar1.innerHTML=(Math.round(balota1));
+            let mostrar2 = document.getElementById("balota2");
+            mostrar2.innerHTML=(Math.round(balota2));
+            let mostrar3 = document.getElementById("balota3");
+            mostrar3.innerHTML=(Math.round(balota3));
+            let mostrar4 = document.getElementById("balota4");
+            mostrar4.innerHTML=(Math.round(balota4));
+            let mostrar5 = document.getElementById("balota5");
+            mostrar5.innerHTML=(Math.round(balota5));
+            let mostrar6 = document.getElementById("balota6");
+            mostrar6.innerHTML=(Math.round(balota6));
    
             setTimeout(function() {
                 animacion.classList.toggle('animate__fadeInTopLeft')
